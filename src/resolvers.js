@@ -3,6 +3,17 @@ const resolvers = {
     movie: (_, { id }, { dataSources }) => {
       return dataSources.movieDbAPI.getMovie(id);
     },
+    tvShow: (_, { id }, { dataSources }) => {
+      return dataSources.movieDbAPI.getTvShow(id);
+    },
+  },
+  Show: {
+    __resolveType(Show) {
+      if (Show.name === true) {
+        return "TV Show";
+      }
+      return "Movie";
+    },
   },
   Movie: {
     cast: async ({ id }, _, { dataSources }) => {
