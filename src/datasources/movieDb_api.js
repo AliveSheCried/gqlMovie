@@ -17,8 +17,9 @@ class MovieDbAPI extends RESTDataSource {
     return this.get(`/tv/${tvShowId}?api_key=${process.env.API_KEY}`);
   }
 
-  getMovieCredits(movieId) {
-    return this.get(`/movie/${movieId}/credits?api_key=${process.env.API_KEY}`);
+  getShowCredits(id) {
+    //console.log(`/${type}/${id}/credits?api_key=${process.env.API_KEY}`);
+    return this.get(`/movie/${id}/credits?api_key=${process.env.API_KEY}`);
   }
 }
 

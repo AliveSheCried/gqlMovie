@@ -14,10 +14,13 @@ const resolvers = {
       }
       return "Movie";
     },
-  },
-  Movie: {
     cast: async ({ id }, _, { dataSources }) => {
-      const responseData = await dataSources.movieDbAPI.getMovieCredits(id);
+      //const type = parent.name ? "tv" : "movie";
+      console.log("hello!");
+      const responseData = await dataSources.movieDbAPI.getShowCredits(
+        id
+        //type
+      );
       const cast = responseData.cast.map((member) => {
         return {
           id: member.id,
