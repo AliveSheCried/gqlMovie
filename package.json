@@ -1,0 +1,25 @@
+{
+  "name": "t-filmapi",
+  "version": "1.0.0",
+  "description": "My first graphQl API that isn't copied from a tutorial",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GraphQL",
+    "movieDB"
+  ],
+  "author": "Robert Hood",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^3.7.0",
+    "apollo-server": "^3.10.2",
+    "dotenv": "^16.0.2",
+    "graphql": "^16.6.0"
+  }
+}
